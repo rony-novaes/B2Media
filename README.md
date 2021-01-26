@@ -15,3 +15,6 @@ Crie um banco de dados com as infos:
 
 - Criará o Banco de Dados, com toda sua estrutura.
 
+
+[comment]: <> (- Criará o Banco de Dados, com toda sua estrutura.)
+
