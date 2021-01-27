@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('/login',[App\Http\Controllers\AuthController::class, 'loggedOneUser'])->name('login');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::prefix('/sale')->group(function() {
+    Route::post('/', [App\Http\Controllers\SalesController::class, 'sale']);
+    Route::post('/product', [App\Http\Controllers\SalesController::class, 'product']);
+});
