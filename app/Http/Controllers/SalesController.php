@@ -34,6 +34,8 @@ class SalesController extends Controller
                 'price'=>$product->price,
             ]);
         }
+        $response['success']=true;
+        echo json_encode($response);
         return;
     }
     public function product(Request $request)

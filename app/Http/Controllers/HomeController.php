@@ -29,4 +29,28 @@ class HomeController extends Controller
         ];
         return view('home',compact('data'));
     }
+    public function searchProduct(Request $request)
+    {
+        $data=Product::where('name', 'like', '%'.$request->ref.'%')
+            ->orWhere('reference', 'like', '%'.$request->ref.'%')
+            ->get();
+        foreach ($data as $product){
+            foreach ($product->suppliers as $supplier){
+                $suppliers[]=[
+                    'name'=>$supplier->supplie->name,
+                ];
+            }
+            $products[]=[
+                'id'=>$product->id,
+                'name'=>$product->name,
+                'reference'=>$product->reference,
+                'price'=>$product->price,
+                'suppliers'=>$suppliers
+            ];
+        }
+        $response['success']=true;
+        $response['data']=$data;
+        echo json_encode($response);
+        return;
+    }
 }

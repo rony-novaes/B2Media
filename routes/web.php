@@ -21,6 +21,8 @@ Route::get('/login',[App\Http\Controllers\AuthController::class, 'loggedOneUser'
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::post('/search', [App\Http\Controllers\HomeController::class, 'searchProduct']);
+
 
 Route::prefix('/sale')->group(function() {
     Route::post('/', [App\Http\Controllers\SalesController::class, 'sale']);

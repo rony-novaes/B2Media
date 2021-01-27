@@ -5,9 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-body row">
+                <div class="p-3">
+                    <input class="form-control" onkeyup="search(this.value)" placeholder="Pesquisar"/>
+                </div>
+                <div class="card-body row" id="cardProducts">
                     @foreach($data['products'] as $key=>$product)
-                    <div class="card col-md-3 p-0 mx-2">
+                    <div class="card col-md-3 p-0 mx-2 my-2">
                         <img src="http://localhost/B2-Media/public/images/bg/{{++$key}}.jpg" class="card-img-top" alt="...">
                         <div class="card-body pt-2">
                             <h5 class="card-title mb-0">{{$product->name}}</h5>
