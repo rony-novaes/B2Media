@@ -15,5 +15,7 @@ Crie um banco de dados com as infos:
 
 - Criará o Banco de Dados, com toda sua estrutura.
 
+Ah e o WorkBranch esta também na Raiz =D
+
 <h3>Ah só um detalhe, na Raiz do Projeto tem o DB: 
 caso queira exportar para o seu ai! ficará perfeito!</h3>
